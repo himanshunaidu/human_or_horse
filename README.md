@@ -27,3 +27,8 @@ Dense Part: 2 Dense layers, each followed by a Dropout, and finally a Dense outp
   Activation: LeakyRelu with alpha=0.15
   Dropout Rate: 0.3
   Output Function: Sigmoid
+
+#Compilation
+
+Optimizer: Adam
+Loss Function: Binary Cross-Entropy
