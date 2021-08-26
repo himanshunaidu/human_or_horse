@@ -2,21 +2,21 @@
 
 Convolutional Neural Network that differentiates between human and horse
 
-#Dataset
+## Dataset
 
 Training Set: https://storage.googleapis.com/laurencemoroney-blog.appspot.com/horse-or-human.zip
 Validation Set: https://storage.googleapis.com/laurencemoroney-blog.appspot.com/validation-horse-or-human.zip
 
-#Dataset Preprocessing
+## Dataset Preprocessing
 
 Scaled by 1/255
 
-#Dataset Extraction Method
+## Dataset Extraction Method
 
 Used zipfile python module for zip extraction
 Used ImageDataGenerator (from tensorflow.keras.preprocessing.image) for supplying images to neural network
 
-#Convolutional Neural Network
+## Convolutional Neural Network
 
 Convolutional Part: 3 Conv2D layers, each followed by a BatchNormalization layer and MaxPool2D layer
   Activation: LeakyRelu with alpha=0.15
@@ -28,7 +28,12 @@ Dense Part: 2 Dense layers, each followed by a Dropout, and finally a Dense outp
   Dropout Rate: 0.3
   Output Function: Sigmoid
 
-#Compilation
+## Compilation
 
 Optimizer: Adam
 Loss Function: Binary Cross-Entropy
+
+## Training
+
+Trained for 15 epochs.
+Resultant model overfitted over training data, thus failing in validation accuracy
